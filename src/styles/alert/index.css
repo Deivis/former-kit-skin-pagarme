@@ -8,25 +8,33 @@
 .alert {
   align-items: center;
   background-color: transparent;
-  border-radius: var(--alert-border-radius);
   box-sizing: border-box;
   display: flex;
   font-family: var(--alert-font-family);
   font-size: var(--alert-font-size);
   height: var(--alert-height);
   width: 100%;
+  border: var(--alert-border);
+}
+
+.alert.dark,
+.alert.light {
+  border-image-slice: var(--alert-border-image-slice);
+  border-image-width: var(--alert-border-image-width);
+  border-image-repeat: var(--alert-border-image-repeat);
+  border-image-outset: var(--alert-border-image-outset);
 }
 
 .dark {
   background-color: var(--alert-dark-background-color);
-  border: var(--alert-dark-border);
   color: var(--alert-dark-color);
+  border-image-source: var(--alert-dark-border-image-source);
 }
 
 .light {
   background-color: var(--alert-light-background-color);
-  border: var(--alert-light-border);
   color: var(--alert-light-color);
+  border-image-source: var(--alert-light-border-image-source);
 }
 
 .content {
@@ -34,12 +42,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-right: var(--alert-content-margin-right);
+  padding: var(--alert-content-padding);
 }
 
 .icon {
   align-items: center;
-  border-radius: var(--alert-icon-border-radius);
+  border: var(--alert-icon-border);
+  box-sizing: border-box;
   color: var(--alert-icon-color);
   display: flex;
   font-size: var(--alert-icon-size);
@@ -47,21 +56,35 @@
   justify-content: center;
   margin-left: var(--alert-icon-margin-left);
   margin-right: var(--alert-icon-margin-right);
-  width: var(--alert-icon-width);
+  padding: var(--alert-icon-padding);
+
+  &.error,
+  &.info,
+  &.success,
+  &.warning {
+    border-image-outset: var(--alert-border-image-outset);
+    border-image-repeat: var(--alert-border-image-repeat);
+    border-image-slice: var(--alert-border-image-slice);
+    border-image-width: var(--alert-border-image-width);
+  }
 }
 
 .warning {
   background-color: var(--alert-warning-color);
+  border-image-source: var(--alert-warning-border-image-source);
 }
 
 .info {
   background-color: var(--alert-info-color);
+  border-image-source: var(--alert-info-border-image-source);
 }
 
 .error {
   background-color: var(--alert-error-color);
+  border-image-source: var(--alert-error-border-image-source);
 }
 
 .success {
   background-color: var(--alert-success-color);
+  border-image-source: var(--alert-success-border-image-source);
 }
