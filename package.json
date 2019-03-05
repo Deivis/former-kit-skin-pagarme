@@ -12,13 +12,12 @@
     "build:compile": "env NODE_ENV=production babel $WATCH src -d dist --ignore test,spec.js,test.js",
     "build": "run-p build:copy build:compile",
     "start": "env WATCH=-w run-p build:copy build:compile",
-    "lint": "eslint 'src/**/*.js'; stylelint 'src/**/*.css'"
+    "lint": "eslint 'src/**/*.js'; stylelint 'src/**/*.css'",
+    "storybook": "start-storybook -p 6006"
   },
   "dependencies": {
     "emblematic-icons": "0.6.1",
-    "react": "16.7.0",
-    "react-dates": "18.4.0",
-    "react-dom": "16.7.0"
+    "react-dates": "18.4.0"
   },
   "devDependencies": {
     "@babel/cli": "7.2.3",
@@ -27,18 +26,51 @@
     "@babel/preset-env": "7.2.3",
     "@babel/preset-react": "7.0.0",
     "@babel/runtime": "7.2.0",
+    "@storybook/addon-actions": "4.1.7",
+    "@storybook/addon-links": "4.1.7",
+    "@storybook/addons": "4.1.7",
+    "@storybook/channels": "4.1.7",
+    "@storybook/react": "4.1.7",
+    "@storybook/storybook-deployer": "2.8.1",
+    "@svgr/webpack": "4.1.0",
+    "babel-loader": "8.0.5",
+    "caniuse-lite": "~1.0.0",
+    "chalk": "2.3.0",
+    "classnames": "2.2.6",
+    "prop-types": "15.6.2",
     "cpx": "1.5.0",
+    "css-loader": "2.1.0",
+    "dotenv": "6.2.0",
     "eslint": "5.12.0",
     "eslint-config-pagarme-react": "1.5.0",
+    "eslint-loader": "2.1.1",
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-jsx-a11y": "6.1.2",
     "eslint-plugin-react": "7.12.4",
+    "extract-text-webpack-plugin": "3.0.2",
+    "former-kit": "1.1.0",
+    "html-webpack-plugin": "3.2.0",
+    "moment": "2.24.0",
     "npm-run-all": "4.1.5",
+    "postcss-cssnext": "3.1.0",
+    "postcss-hexrgba": "1.0.1",
+    "postcss-import": "12.0.1",
+    "postcss-loader": "3.0.0",
+    "postcss-sass-each": "0.1.0",
+    "postcss-url": "8.0.0",
+    "react": "16.8.1",
+    "react-dom": "16.8.1",
+    "react-with-direction": "1.3.0",
+    "style-loader": "0.23.1",
     "stylelint": "9.10.0",
-    "stylelint-config-pagarme-react": "1.2.0"
+    "stylelint-config-pagarme-react": "1.2.0",
+    "url-loader": "1.1.2",
+    "webpack": "4.28.4",
+    "webpack-dev-server": "3.1.14",
+    "webpack-manifest-plugin": "2.0.4"
   },
   "peerDependencies": {
-    "react": "*",
-    "react-dom": "*"
+    "react": "16.x",
+    "react-dom": "16.x"
   }
 }
