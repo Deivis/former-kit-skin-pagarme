@@ -3,13 +3,21 @@
 @import "../typography.css";
 
 :root {
-  --button-border-radius: 3px;
   --button-color: var(--color-white);
   --button-font-family: var(--title-font-family);
   --button-font-style: var(--title-font-style);
   --button-font-weight: var(--title-font-weight);
   --button-letter-spacing: var(--letter-spacing);
   --button-user-select: none;
+
+  --button-border: 4px solid;
+  --button-border-image-outset: 2;
+  --button-border-image-repeat: stretch;
+  --button-border-image-slice: 2;
+  --button-border-image-width: 2;
+
+  --button-border-image-source: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="5" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2 1 h1 v1 h-1 z M1 2 h1 v1 h-1 z M3 2 h1 v1 h-1 z M2 3 h1 v1 h-1 z" fill="rgb(44,44,44)" /></svg>');
+  --button-disabled-border-image-source: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="5" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2 1 h1 v1 h-1 z M1 2 h1 v1 h-1 z M3 2 h1 v1 h-1 z M2 3 h1 v1 h-1 z" fill="rgb(181,181,181)" /></svg>');
 
   --button-default-font-size: 14px;
   --button-default-height: 32px;
@@ -32,50 +40,50 @@
   --button-high-relevance-flat-background-color: var(--color-light-salmon-100);
   --button-high-relevance-gradient: var(--color-light-salmon-gradient);
   --button-high-relevance-outline-color: var(--color-light-salmon-100);
-  --button-high-relevance-outline-border-color: var(--color-light-salmon-100);
-  --button-high-relevance-outline-border-width: 1px;
+  --button-high-relevance-outline-border-color-focus: var(--color-light-salmon-150);
   --button-high-relevance-outline-color-enter: var(--color-white);
   --button-high-relevance-outline-background-color-focus: var(--color-light-salmon-100);
-  --button-high-relevance-outline-border-color-focus: var(--color-light-salmon-150);
+  --button-high-relevance-outline-border-color: var(--color-light-salmon-100);
   --button-high-relevance-outline-boxshadow-focus: var(--color-light-salmon-150) 0 0 0 1px inset;
   --button-high-relevance-clean-color: var(--color-light-salmon-100);
   --button-high-relevance-clean-color-hover: var(--color-light-salmon-120);
   --button-high-relevance-clean-color-active: var(--color-light-salmon-150);
   --button-high-relevance-clean-color-focus: var(--color-light-salmon-120);
+  --button-high-relevance-outline-image-source: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="5" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2 1 h1 v1 h-1 z M1 2 h1 v1 h-1 z M3 2 h1 v1 h-1 z M2 3 h1 v1 h-1 z" fill="rgb(186,88,81)" /></svg>');
 
   --button-low-relevance-background-color-hover: var(--color-light-iron-100);
   --button-low-relevance-background-color-active: var(--color-light-grey-100);
   --button-low-relevance-boxshadow-focus: #979797 0 0 0 2px inset;
   --button-low-relevance-flat-background-color: var(--color-light-grey-50);
   --button-low-relevance-gradient: var(--color-light-grey-gradient);
-  --button-low-relevance-outline-color: var(--color-light-grey-50);
   --button-low-relevance-outline-border-color: var(--color-light-grey-50);
-  --button-low-relevance-outline-border-width: 1px;
+  --button-low-relevance-outline-border-color-focus: #979797;
+  --button-low-relevance-outline-color: var(--color-light-grey-50);
   --button-low-relevance-outline-color-enter: var(--color-white);
   --button-low-relevance-outline-background-color-focus: var(--color-light-grey-50);
-  --button-low-relevance-outline-border-color-focus: #979797;
   --button-low-relevance-outline-boxshadow-focus: #979797 0 0 0 1px inset;
   --button-low-relevance-clean-color: var(--color-light-grey-50);
   --button-low-relevance-clean-color-hover: var(--color-light-iron-100);
   --button-low-relevance-clean-color-active: var(--color-light-grey-100);
   --button-low-relevance-clean-color-focus: var(--color-light-iron-100);
+  --button-low-relevance-outline-image-source: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="5" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2 1 h1 v1 h-1 z M1 2 h1 v1 h-1 z M3 2 h1 v1 h-1 z M2 3 h1 v1 h-1 z" fill="rgb(133,140,143)" /></svg>');
 
   --button-normal-relevance-background-color-hover: var(--color-light-greenish-120);
   --button-normal-relevance-background-color-active: var(--color-light-greenish-150);
   --button-normal-relevance-boxshadow-focus: var(--color-light-greenish-150) 0 0 0 2px inset;
   --button-normal-relevance-flat-background-color: var(--color-light-greenish-100);
   --button-normal-relevance-gradient: var(--color-light-greenish-gradient);
+  --button-normal-relevance-border-color: var(--color-light-greenish-100);
+  --button-normal-relevance-outline-border-color-focus: var(--color-light-greenish-150);
   --button-normal-relevance-outline-color: var(--color-light-greenish-100);
-  --button-normal-relevance-outline-border-color: var(--color-light-greenish-100);
-  --button-normal-relevance-outline-border-width: 1px;
   --button-normal-relevance-outline-color-enter: var(--color-white);
   --button-normal-relevance-outline-background-color-focus: var(--color-light-greenish-100);
-  --button-normal-relevance-outline-border-color-focus: var(--color-light-greenish-150);
   --button-normal-relevance-outline-boxshadow-focus: var(--color-light-greenish-150) 0 0 0 1px inset;
   --button-normal-relevance-clean-color: var(--color-light-greenish-100);
   --button-normal-relevance-clean-color-hover: var(--color-light-greenish-120);
   --button-normal-relevance-clean-color-active: var(--color-light-greenish-150);
   --button-normal-relevance-clean-color-focus: var(--color-light-greenish-120);
+  --button-normal-relevance-outline-image-source: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="5" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2 1 h1 v1 h-1 z M1 2 h1 v1 h-1 z M3 2 h1 v1 h-1 z M2 3 h1 v1 h-1 z" fill="rgb(43,158,119)" /></svg>');
 
   --button-disabled-background-color: var(--color-light-silver-50);
   --button-disabled-color: var(--color-light-silver-100);
